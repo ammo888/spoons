@@ -1,2 +1,5 @@
 hotkeys = require('Spoons.hotkeys')
-hotkeys.windowResize()
+hotkeys.windowResizeBinds()
+
+awake = require('Spoons.awake')
+awake.run()

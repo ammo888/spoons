@@ -1,6 +1,8 @@
 local M = {}
-M.windowResize = function ()
+
+function M.windowResizeBinds()
     hs.window.animationDuration = 0
+
     hs.hotkey.bind({'alt', 'ctrl'}, 'return', function()
         local win = hs.window.focusedWindow()
         local f = win:frame()
@@ -13,6 +15,7 @@ M.windowResize = function ()
         f.h = max.h
         win:setFrame(f)
     end)
+
     hs.hotkey.bind({'alt', 'ctrl'}, 'H', function()
         local win = hs.window.focusedWindow()
         local f = win:frame()
@@ -25,6 +28,7 @@ M.windowResize = function ()
         f.h = max.h
         win:setFrame(f)
     end)
+
     hs.hotkey.bind({'alt', 'ctrl'}, 'L', function()
         local win = hs.window.focusedWindow()
         local f = win:frame()
@@ -37,6 +41,7 @@ M.windowResize = function ()
         f.h = max.h
         win:setFrame(f)
     end)
+
     hs.hotkey.bind({'alt', 'ctrl'}, 'U', function()
         local win = hs.window.focusedWindow()
         local f = win:frame()
@@ -49,6 +54,7 @@ M.windowResize = function ()
         f.h = max.h / 2
         win:setFrame(f)
     end)
+
     hs.hotkey.bind({'alt', 'ctrl'}, 'I', function()
         local win = hs.window.focusedWindow()
         local f = win:frame()
@@ -61,6 +67,7 @@ M.windowResize = function ()
         f.h = max.h / 2
         win:setFrame(f)
     end)
+
     hs.hotkey.bind({'alt', 'ctrl'}, 'J', function()
         local win = hs.window.focusedWindow()
         local f = win:frame()
@@ -73,6 +80,7 @@ M.windowResize = function ()
         f.h = max.h / 2
         win:setFrame(f)
     end)
+
     hs.hotkey.bind({'alt', 'ctrl'}, 'K', function()
         local win = hs.window.focusedWindow()
         local f = win:frame()
@@ -86,4 +94,5 @@ M.windowResize = function ()
         win:setFrame(f)
     end)
 end
+
 return M
